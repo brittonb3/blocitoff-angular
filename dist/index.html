@@ -6,9 +6,15 @@
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    
-    <ui-view></ui-view>
-    
+    <section class="task-section">
+      <div class="task-title">
+        <h1 class="title">Current tasks</h1>
+        <ui-view></ui-view>
+      </div>
+    </section>
+
+
+
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <!-- Firebase -->
@@ -31,6 +37,6 @@
       };
       firebase.initializeApp(config);
     </script>
-    
+
 </body>
 </html>

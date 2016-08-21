@@ -1,0 +1,27 @@
+html {
+  height: : 100%;
+  font-size: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  color: black;
+  min-height: 100%;
+}
+
+
+.task-title {
+  position: absolute;
+  background-color: gray;
+  height: 45px;
+  width: 400px;
+  top: 30%;
+  left: 35%;
+  text-align: top;
+}
+
+.title {
+  position: relative;
+  bottom: 30%;
+  text-align: center;
+}

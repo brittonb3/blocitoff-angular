@@ -1,6 +1,15 @@
-<h1>Home Page</h1>
-
-<form ng-submit="addTask()">
-    <input ng-model="newTask"/>
+<section>
+  <form ng-submit="addTask()">
+    <input type="text" ng-model="newTask" placeholder="Add new task">
     <button type="submit">New Task</button>
-</form>
+  </form>
+</section>
+<section class="newTasks" ng-controller="HomeCtrl">
+  <div>
+    <table class="task-table">
+      <tr ng-repeat="task in tasks">
+        <td>{{ task.text }}</td>
+      </tr>
+    </table>
+  </div>
+</section
