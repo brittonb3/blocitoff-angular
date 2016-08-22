@@ -6,12 +6,17 @@
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <section class="task-section">
+    <nav class="navbar">
+        <a ui-sref="home">Active Tasks</a>
+        <a ui-sref="history">Task History</a>
+    </nav>
+   <section class="task-section">
       <div class="task-title">
-        <h1 class="title">Current tasks</h1>
+        <h1 class="title">Tasks</h1>
         <ui-view></ui-view>
       </div>
     </section>
+   
 
 
 
@@ -27,6 +32,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/controllers/HomeCtrl.js"></script>
+    <script src="/scripts/controllers/HistoryCtrl.js"></script>
     <script>
       // Initialize Firebase
       var config = {

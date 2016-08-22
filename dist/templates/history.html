@@ -1,0 +1,10 @@
+
+<section class="newTasks" ng-controller="HomeCtrl">
+  <div>
+    <table class="task-table">
+      <tr ng-repeat="task in tasks" ng-show="expiredTask(task)">
+        <td>{{ task.text}}</td>
+      </tr>
+    </table>
+  </div>
+</section
