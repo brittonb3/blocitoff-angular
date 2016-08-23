@@ -2,14 +2,22 @@
 <section>
   <form ng-submit="addTask()">
     <input type="text" ng-model="newTask" placeholder="Add new task">
+    <select ng-model="newPriority">
+      <option value="High">High</option>
+      <option value="Med">Med</option>
+      <option value="Low">Low</option>
+    </select>
     <button type="submit">New Task</button>
   </form>
 </section>
 <section class="newTasks" ng-controller="HomeCtrl">
   <div>
     <table class="task-table">
+      <th>Task description</th>
+      <th>Priority</th>
       <tr ng-repeat="task in tasks" ng-hide="expiredTask(task)">
         <td>{{ task.text}}</td>
+        <td>{{ task.priority}}</td>
       </tr>
     </table>
   </div>
