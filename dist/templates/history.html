@@ -3,8 +3,11 @@
   <div>
     <table class="task-table">
       <tr ng-repeat="task in tasks" ng-show="expiredTask(task)">
-        <td>{{ task.text}} - {{ task.state = "expired" }}</td>
+        <td>{{ task.text}} - {{ task.state }}</td>
       </tr>
+      <tr ng-repeat="task in tasks" ng-show="task.complete === true">
+        <td>{{ task.text}} - Completed</td>
+        </tr> 
     </table>
   </div>
 </section

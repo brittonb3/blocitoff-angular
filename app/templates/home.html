@@ -15,10 +15,10 @@
     <table class="task-table">
       <th>Task description</th>
       <th>Priority</th>
-      <tr ng-repeat="task in tasks" ng-hide="expiredTask(task)">
+      <tr ng-repeat="task in tasks" ng-show="task.complete === false" ng-hide="expiredTask(task) || task.complete === true">
         <td>{{ task.text}}</td>
         <td>{{ task.priority}}</td>
-      </tr>
+          <td>{{ task.complete}} <input type="checkbox" ng-model="task.complete" ng-change="completedTask(task)"></td>
     </table>
   </div>
 </section
