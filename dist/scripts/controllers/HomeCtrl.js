@@ -15,7 +15,7 @@
          
          $scope.expiredTask = function(task) {
             var currentTime = new Date();
-            if ((currentTime - task.time) >= 10000){
+            if ((currentTime - task.time) >= 604800000){
                 if( task.complete === true) {
                     return false;
                 }
